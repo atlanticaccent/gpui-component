@@ -21,6 +21,8 @@ jobs:
         uses: dtolnay/rust-toolchain@stable
       - name: Configure cache
         uses: Swatinem/rust-cache@v2
+      - name: Install system dependencies
+        run: script/bootstrap
       - name: Setup pages
         id: pages
         uses: actions/configure-pages@v5
