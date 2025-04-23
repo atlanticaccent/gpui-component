@@ -27,9 +27,9 @@ jobs:
       - name: Clean docs folder
         run: cargo clean --doc
       - name: Build docs
-        run: cargo doc -p ui --no-deps
+        run: cargo doc -p gpui-component --no-deps
       - name: Add redirect
-        run: echo '<meta http-equiv="refresh" content="0;url=ui/index.html">' > target/doc/index.html
+        run: echo '<meta http-equiv="refresh" content="0;url=gpui-component/index.html">' > target/doc/index.html
       - name: Remove lock file
         run: rm target/doc/.lock
       - name: Upload artifact
